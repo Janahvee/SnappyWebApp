@@ -11,30 +11,11 @@
     <body>
         <div class="member-area">
             <div class="user-info">
-                Janahvee Shah
+                <span id="username"></span>
                 <span class="logout">Log Out</span>
             </div>
 
-            <div class="members">
-                <div class="member">
-                    Jasmin
-                </div>
-
-                <div class="member active">
-                    Kesha
-                </div>
-
-                <div class="member">
-                    Neha
-                </div>
-
-                <div class="member">
-                    Payal
-                </div>
-
-                <div class="member">
-                    Sanyam
-                </div>
+            <div class="members" id="members">
 
             </div>
         </div>
@@ -44,52 +25,32 @@
                 Kesha
             </div>
 
-            <div class="messages">
-                  <div class="message">
-                      hi
-                  </div>
-                  <div class="message by-user">
-                      how are you?
-                  </div>
-                  <div class="message">
-                      whats up?
-                  </div>
-                  <div class="message by-user">
-                      learning
-                  </div>
-                  <div class="message">
-                      That's good
-                  </div>
-                  <div class="message by-user">
-                      how are you?
-                  </div>
-                  <div class="message">
-                      whats up?
-                  </div>
-                  <div class="message by-user">
-                      learning
-                  </div>
-                  <div class="message">
-                      That's good
-                  </div>
-                  <div class="message by-user">
-                      how are you?
-                  </div>
-                  <div class="message">
-                      whats up?
-                  </div>
-                  <div class="message by-user">
-                      learning
-                  </div>
-                  <div class="message">
-                      That's good
-                  </div>
+            <div class="message" id="messages">
+
             </div>
 
             <div class="chat-form">
-                <input type="text" class="chat-message" placeholder="Write  your message and press enter"/>
-
+                <input type="hidden" id="chat_id"/>
+                <input type="text" id="message-text" class="chat-message" placeholder="Write  your message and press enter"/>
+                <button id="send-button">Send</button>
             </div>
         </div>
+
+        <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyC5Fvuot4EjVkSW8Uv3Wp2UywgXgM7rYG0",
+            authDomain: "snappychatweb.firebaseapp.com",
+            databaseURL: "https://snappychatweb.firebaseio.com",
+            storageBucket: "snappychatweb.appspot.com",
+            messagingSenderId: "692097003146"
+          };
+          firebase.initializeApp(config); /* initializeApp by this*/
+        </script>
+
+        <script type="text/javascript" src="functions.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="chat.js"></script>
     </body>
   </html>
